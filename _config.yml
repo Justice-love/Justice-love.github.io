@@ -1,17 +1,17 @@
 
 title: Karna
 desctiption: Karna is a responsive jekyll theme which includes pinterest like pins.
-url: http://webjeda.com/
+url: https://justice-love.github.io/
 permalink: ':title/'
 
 markdown: kramdown
-baseurl: "/karna"
+baseurl: ""
 
 
 sass:
     style: compressed
 
-  
+
 #optimization
 #compress.html
 compress_html:
@@ -35,7 +35,7 @@ disqus-shortname: webjeda-demo
 
 # Contact form
 # Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
-api-token:   
+api-token:
 
 include: [_pages]
 version: 0.8
