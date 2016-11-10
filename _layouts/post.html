@@ -1,22 +1,77 @@
 ---
-layout: default
+layout: compress
 ---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="wrapper animated fadeIn">
+            <div class="content">
+                <div class="post-title {% if page.feature %} feature {% endif %}">
+                    <h1>{{ page.title }}</h1>
+                    <h4>{{ page.date | date_to_string }}</h4>
+                    {% if site.reading_time %}
+                    <p class="reading-time">
+                      <i class="fa fa-clock-o"></i>
+                      {% include read-time.html %}
+                    </p><!-- /.entry-reading-time -->
+                    {% endif %}
+                    {% if page.project %}
+                    <a class="btn zoombtn" href="{{site.url}}/projects/">
+                    {% elsif page.life %}
+                    <a class="btn zoombtn" href="{{site.url}}/life/">
+                    {% else %}
+                    <a class="btn zoombtn" href="{{site.url}}/posts/">
+                    {% endif %}
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </div>
+                {{ content }}
+                <div class="entry-meta">
+                {% include meta.html %}
+                </div>
+            </div>
+        </div>
+        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
+        {% if page.comments and site.duoshuo %}
+        <section id="disqus_thread" class="animated fadeInUp">
+          <!-- 多说评论框 start -->
+	        <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+          <!-- 多说评论框 end -->
+          <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+          var duoshuoQuery = {short_name:"justice-love"};
+          	(function() {
+          		var ds = document.createElement('script');
+          		ds.type = 'text/javascript';ds.async = true;
+          		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+          		ds.charset = 'UTF-8';
+          		(document.getElementsByTagName('head')[0]
+          		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+          	})();
+          	</script>
+          <!-- 多说公共JS代码 end -->
+        </section>
+        <style>
+          .ds-powered-by {
+            display: none;
+          }
 
-<div class="page-container">
-   {% if page.img %}
-    <img class="featured-img" src={{ "/images-hq/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-    {% endif %}
-    <div class="content">
-    <article>
-        <h1 class="page-title">{{page.title}}</h1>
-        {% if page.author %}
-        <div class="meta"><span><i class="fa fa-calendar-o" aria-hidden="true"></i> {{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{page.author}}</span></div>
+        </style>
         {% endif %}
-        {{page.content | markdownify}}
-    </article>
-            {% if page.categories %}
-                {% include disqus.html %}
-            {% else %}
-            {% endif %}
-    </div>
-</div>
+    </header>
+    {% include scripts.html %}
+    {% if site.mathjax == true %}
+    <!-- MathJax -->
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
+</body>
+</html>

@@ -1,43 +1,74 @@
+# Site
+title:              轶 & 霄
+bio:                '这是地球上的一个小角落，纪录着我们的点滴'
+description:        "我们的小窝"
+reading_time:       true
+words_per_minute:   200
+logo:               'assets/img/logo.png'
+background:         'assets/img/placeholder-big.jpg'
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             zh_CN
+url:                //justice-love.com
 
-title: Karna
-desctiption: Karna is a responsive jekyll theme which includes pinterest like pins.
-url: https://justice-love.github.io/
-permalink: ':title/'
-
-markdown: kramdown
-baseurl: ""
-
-
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
 sass:
-    style: compressed
-
-
-#optimization
-#compress.html
-compress_html:
-  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
-  comments: ["<!-- ", " -->"]
-  endings: [all]
-  ignore:
-    envs: [local]
-  blanklines: false
-  profile: false
-  startings: []
-
-highlight: rouge
-
-
-# Tracker
-analytics: UA-83979019-1
+  sass_dir:         _sass
+  style:            compressed
 
 # Comments
-disqus-shortname: webjeda-demo
+#disqus_shortname:   nzFsp8949o
+duoshuo: true
+# Social
+# if you don't have any of social below, comment the line.
+#google:
+  #plus:            #username
+  #analytics:
+  #verify:
+  #ad-client:
+  #ad-slot:
+#bing-verify:
+email:              eddyxu1213@126.com
+#twitter:            username
+#facebook:           徐轶
+github:             Justice-love
+stackoverflow:     6885228/justice-love
+#linkedin:          username
+#xing:              username
+#instagram:          username
+#lastfm:            username
+#tumblr:            username
+#pinterest:         username
+#foursquare:        username
+#steam:              username
+#dribbble:          username
+#youtube:           username
+#soundcloud:        username
+weibo:             Eddy_XuYi
+#flickr:            username
+#codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
 
-# Contact form
-# Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
-api-token:
+# Gems
+gems:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
 
-include: [_pages]
-version: 0.8
+jekyll-mentions:
+    base_url: https://github.com
 
-gems: [jekyll-paginate, jekyll-seo-tag]
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
