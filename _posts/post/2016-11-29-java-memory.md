@@ -9,7 +9,7 @@ tag:
 - memory
 comments: true
 ---
-[作者@蛋疼的axb, 文章源连接](http://blog.2baxb.me/archives/918)
+[作者@蛋疼的axb, 文章源链接](http://blog.2baxb.me/archives/918)
 
 # 1.摘要
 
