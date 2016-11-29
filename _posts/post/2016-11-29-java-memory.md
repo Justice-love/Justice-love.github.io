@@ -11,16 +11,16 @@ comments: true
 ---
 [文章源连接](http://blog.2baxb.me/archives/918)
 
-# _1._摘要
+# 1.摘要
 
 最近排查了一个比较灵异的线上jvm内存持续增长的问题，排查过程异常艰辛，但是最后竟然是用最简单的办法搞定了……
 
 
-# _2._现象
+# 2.现象
 
 线上机器部署了两个java实例，在运行几天后java开始吃swap空间，java实例的内存占用接近7G，程序响应很慢，重启后又恢复正常。线上配置的堆内存为3600M，栈大小为512k。
 
-# _3._排查
+# 3.排查
 
 首先怀疑是java heap的问题，查看heap占用内存，没有什么特殊。
 
@@ -169,7 +169,7 @@ public class MonBuffers {
 
 在升级jdk、限制directbuffer大小为256M、调整MALLOC_ARENA_MAX=1后，4倍流量的tcpcopy运行几天后内存占用稳定在5G；只升级了jdk，其它参数不变，运行一天后内存为5.4G，是否上涨还有待观察。对比之前占用6.8G左右，效果还是比较明显的。
 
-# _4._其它参考资料
+# 4.其它参考资料
 
 1. java 的堆外内存溢出最近也碰到过几次，有一次是jdk6的一个directbuffer不释放，有jdk6的String.intern 非fullgc不释放。还有就是gzip流不显式关闭也会导致Deflater内存溢出。 找起来 都真是难啊
 2. directbuffer在jdk7之后监控变得简单一些了，native的内存确实比较难查。
