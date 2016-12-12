@@ -87,7 +87,7 @@ var hq_str_sh601006="大秦铁路, 27.55, 27.25, 26.91, 27.55, 26.20, 26.91, 26.
 查询深圳成指数：
 ```[http://hq.sinajs.cn/list=s_sz399001](http://hq.sinajs.cn/list=s_sz399001)```
 
-对于股票的K线图，日线图等的获取可以通过请求http://image.sinajs.cn/…./…/*.gif此URL获取，其中*代表股票代码，详见如下：
+对于股票的K线图，日线图等的获取可以通过请求http://image.sinajs.cn/…./…/\*.gif此URL获取，其中\*代表股票代码，详见如下：
 
 查看日K线图：
 [http://image.sinajs.cn/newchart/daily/n/sh601006.gif](http://image.sinajs.cn/newchart/daily/n/sh601006.gif)
