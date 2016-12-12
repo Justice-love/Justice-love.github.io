@@ -74,7 +74,7 @@ var hq_str_sh601006="大秦铁路, 27.55, 27.25, 26.91, 27.55, 26.20, 26.91, 26.
 如果你要同时查询多个股票，那么在URL最后加上一个逗号，再加上股票代码就可以了；
 
 比如你要一次查询大秦铁路（601006）和大同煤业（601001）的行情，就这样使用URL：
-```[http://hq.sinajs.cn/list=sh601003,sh601001](http://hq.sinajs.cn/list=sh601003,sh601001)```
+[http://hq.sinajs.cn/list=sh601003,sh601001](http://hq.sinajs.cn/list=sh601003,sh601001)
 
 查询大盘指数，比如查询上证综合指数（000001）：
 [http://hq.sinajs.cn/list=s_sh000001](http://hq.sinajs.cn/list=s_sh000001)
@@ -85,7 +85,7 @@ var hq_str_sh601006="大秦铁路, 27.55, 27.25, 26.91, 27.55, 26.20, 26.91, 26.
 数据含义分别为：指数名称，当前点数，当前价格，涨跌率，成交量（手），成交额（万元）；
 
 查询深圳成指数：
-```[http://hq.sinajs.cn/list=s_sz399001](http://hq.sinajs.cn/list=s_sz399001)```
+[http://hq.sinajs.cn/list=s_sz399001](http://hq.sinajs.cn/list=s_sz399001)
 
 对于股票的K线图，日线图等的获取可以通过请求http://image.sinajs.cn/…./…/\*.gif此URL获取，其中\*代表股票代码，详见如下：
 
