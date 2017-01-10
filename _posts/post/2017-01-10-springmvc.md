@@ -13,7 +13,8 @@ spring mvc表单提交集合对象参数传递报错
 
 ### 页面代码
 
-```
+{% highlight html %}
+{% raw %}
 <form action="swingAdd.html" method="post">
 <hr/>
 <p>id:<input type="text" name="list[0].id"/>,
@@ -28,7 +29,8 @@ child_id:<input type="text" name="list[0].child"/>。 <input type="button" oncli
 <p>
 <input type="submit" value="提交"/>
 <form>
-```
+{% endraw %}
+{% endhighlight %}
 
 ### controller 代码
 ```
