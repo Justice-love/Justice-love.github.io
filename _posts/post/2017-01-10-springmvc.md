@@ -17,8 +17,9 @@ spring mvc表单提交集合对象参数传递报错
 {% raw %}
 <form action="swingAdd.html" method="post">
 <hr/>
-<p>id:<input type="text" name="list[0].id"/>,
+<p>
 
+id:<input type="text" name="list[0].id"/>,
 root: <select name="list[0].root"><option value="false">false<option><option value="true" selected="selected">true<option><select>,
 expression:<input type="text" name="list[0].expression"/>,
 validate_type:<select name="list[0].validateType"><option value="buyPrice">buyPriceo<ption><select>,
