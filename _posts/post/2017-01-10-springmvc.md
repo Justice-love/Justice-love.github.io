@@ -33,17 +33,20 @@ child_id:<input type="text" name="list[0].child"/>。 <input type="button" oncli
 {% endhighlight %}
 
 ### controller 代码
-```
+{% highlight java %}
+{% raw %}
 @RequestMapping(value = "/swingAdd", method = RequestMethod.POST)
     public String swingAdd(SwingFormList formList, Model model) {
 //        System.out.println(swingList);
   return "swing/swingRule";
     }
-```
+{% endraw %}
+{% endhighlight %}
 
 ### SwingFormList源码
 
-```
+{% highlight java %}
+{% raw %}
 public class SwingFormList {
     private List<Swing> list;
 
@@ -55,10 +58,12 @@ public class SwingFormList {
         this.list = list;
     }
 }
-```
+{% endraw %}
+{% endhighlight %}
 
 ### Swing源码
-```
+{% highlight java %}
+{% raw %}
 public class Swing {
 
     //REQUIRED
@@ -74,7 +79,8 @@ public class Swing {
     //other
   private boolean root;
  }
-```
+{% endraw %}
+{% endhighlight %}
 没拷贝 get/set方法了
 
 ### 页面错误信息
@@ -93,7 +99,7 @@ __spring代码见下方__
 
 org.springframework.beans.TypeConverterDelegate#convertIfNecessary(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Class<T>, org.springframework.core.convert.TypeDescriptor)
 
-```
+{% highlight java %}
 else if (convertedValue instanceof String && !requiredType.isInstance(convertedValue)) {
    if (conversionAttemptEx == null && !requiredType.isInterface() && !requiredType.isEnum()) {
       try {
@@ -112,5 +118,5 @@ else if (convertedValue instanceof String && !requiredType.isInstance(convertedV
          }
       }
    }
-```
+{% endhighlight %}
 __由于我没有定义一个参数为一个String对象的构造函数，导致在赋值的时候产生了异常。__
