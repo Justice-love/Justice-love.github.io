@@ -8,10 +8,10 @@ tag:
 - spring mvc
 comments: true
 ---
-#### 问题
+### 问题
 spring mvc表单提交集合对象参数传递报错
 
-#### 页面代码
+### 页面代码
 
 ```
 <form action="swingAdd.html" method="post">
@@ -30,7 +30,7 @@ child_id:<input type="text" name="list[0].child"/>。 <input type="button" oncli
 <form>
 ```
 
-#### controller 代码
+### controller 代码
 ```
 @RequestMapping(value = "/swingAdd", method = RequestMethod.POST)
     public String swingAdd(SwingFormList formList, Model model) {
@@ -39,7 +39,7 @@ child_id:<input type="text" name="list[0].child"/>。 <input type="button" oncli
     }
 ```
 
-#### SwingFormList源码
+### SwingFormList源码
 
 ```
 public class SwingFormList {
@@ -55,7 +55,7 @@ public class SwingFormList {
 }
 ```
 
-#### Swing源码
+### Swing源码
 ```
 public class Swing {
 
@@ -75,7 +75,7 @@ public class Swing {
 ```
 没拷贝 get/set方法了
 
-#### 页面错误信息
+### 页面错误信息
 
 ```
 There was an unexpected error (type=Bad Request, status=400).
@@ -83,7 +83,7 @@ There was an unexpected error (type=Bad Request, status=400).
 Validation failed for object='swingFormList'. Error count: 1
 ```
 
-#### 补充出错原因
+### 补充出错原因
 child name 为```child_id:<input type="text" name="list[0].child"/>```， 而 ```Swing.class == org.eddy.swing.entity.Swing#child.getClass()```
 spring会尝试获取参数为一个字符串类型的构造函数并newInstance
 
