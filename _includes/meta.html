@@ -3,10 +3,10 @@
 <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
 <script src="{{ site.url }}/assets/js/jquery.share.min.js"></script>
 <span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag"><span class="term">{{ tag }}</span></a>{% unless forloop.last %}{% endunless %}{% endfor %}</span>
-<div id="share-2"></div>
+<div id="share-china"></div>
 <div style="clear:both"></div>
 <script>
 
-$('#share-2').share({sites: ['qzone', 'qq', 'weibo','wechat']});
+$('#share-china').share({sites: ['qzone', 'weibo','wechat', 'facebook', 'twitter', 'google']});
 
 </script>
