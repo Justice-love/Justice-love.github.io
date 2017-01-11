@@ -121,3 +121,47 @@ else if (convertedValue instanceof String && !requiredType.isInstance(convertedV
    }
 {% endhighlight %}
 __由于我没有定义一个参数为一个String对象的构造函数，导致在赋值的时候产生了异常。__
+
+### 补充
+spring 能够调用目标类型的工厂方法来构造对象。
+
+见：__org.springframework.core.convert.support.ObjectToObjectConverter#determineFactoryMethod__
+{% highlight java %}
+private static Method determineFactoryMethod(Class<?> targetClass, Class<?> sourceClass) {
+  if (String.class == targetClass) {
+    // Do not accept the String.valueOf(Object) method
+    return null;
+  }
+
+  Method method = ClassUtils.getStaticMethod(targetClass, "valueOf", sourceClass);
+  if (method == null) {
+    method = ClassUtils.getStaticMethod(targetClass, "of", sourceClass);
+    if (method == null) {
+      method = ClassUtils.getStaticMethod(targetClass, "from", sourceClass);
+    }
+  }
+  return method;
+}
+{% endhighlight %}
+
+触发方法:
+
+org.springframework.beans.TypeConverterDelegate#convertIfNecessary(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Class<T>, org.springframework.core.convert.TypeDescriptor)
+
+{% highlight java %}
+ConversionService conversionService = this.propertyEditorRegistry.getConversionService();
+if (editor == null && conversionService != null && newValue != null && typeDescriptor != null) {
+  TypeDescriptor sourceTypeDesc = TypeDescriptor.forObject(newValue);
+  if (conversionService.canConvert(sourceTypeDesc, typeDescriptor)) {
+    try {
+      return (T) conversionService.convert(newValue, sourceTypeDesc, typeDescriptor);
+    }
+    catch (ConversionFailedException ex) {
+      // fallback to default conversion logic below
+      conversionAttemptEx = ex;
+    }
+  }
+}
+{% endhighlight %}
+
+具体位置 __return (T) conversionService.convert(newValue, sourceTypeDesc, typeDescriptor);__
