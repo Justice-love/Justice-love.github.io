@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "多组织多法人的是一些思考"
+title:  "多租户Saas服务"
 date:   2017-01-16
-excerpt: "多组织多法人的是一些思考"
+excerpt: "多租户Saas服务，主要是多组织多法人的一些思考"
 tag:
 - 组织
 - 多法人
