@@ -21,7 +21,7 @@ comments: true
 ### 隔离粒度-组织
 * 组织结构图
 
-![组织结构图](http://ojt8gkzcy.bkt.clouddn.com/image/png/org.png)
+![组织结构图](http:{{ site.staticUrl }}/image/png/org.png)
 
 ### 一级项目
 * 组织法人隔离，包括数据隔离，运行环境隔离
