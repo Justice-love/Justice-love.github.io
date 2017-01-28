@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "java线程特性之一，异常"
+title:  "java线程特性之异常的处理方式"
 date:   2017-01-28
 excerpt: "java线程的设计思想中关于线程中异常的处理方式"
 tag:
