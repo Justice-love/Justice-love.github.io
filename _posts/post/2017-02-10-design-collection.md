@@ -2,7 +2,7 @@
 layout: post
 title:  "设计模式-合辑"
 date:   2017-02-03
-excerpt: "合辑"
+excerpt: "完结"
 tag:
 - 设计模式
 comments: true
@@ -15,3 +15,4 @@ comments: true
 * [设计模式之三，责任链模式，装饰模式，策略模式]({{ site.url }}/design3)
 * [设计模式之四，适配器模式，迭代器模式，组合模式，观察者模式]({{ site.url }}/design4)
 * [设计模式之五，门面模式，备忘录模式，访问者模式，状态模式]({{ site.url }}/design5)
+* [设计模式之六，解释器模式，享元模式，桥梁模式]({{ site.url }}/design6)
