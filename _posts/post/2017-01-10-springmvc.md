@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "spring mvn表单参数传递"
+title:  "spring mvc表单参数传递"
 date:   2017-01-10
 excerpt: "记一次spring mvc表单提交集合对象参数传递报错问题"
 tag:
