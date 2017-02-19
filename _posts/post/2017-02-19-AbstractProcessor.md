@@ -56,7 +56,7 @@ public class AbstractProcessorImpl extends AbstractProcessor {
 
 ## 修改pom文件
 
-* 指定编译期不执行任何AbstractProcessor，否则会出现问题 -proc:none
+* 指定编译期不执行任何AbstractProcessor，否则会出现问题
 * 主要代码```-proc:none```
 {% highlight xml %}
 {% raw %}
