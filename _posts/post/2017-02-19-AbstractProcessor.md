@@ -64,10 +64,10 @@ public class AbstractProcessorImpl extends AbstractProcessor {
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>${your.version}</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <!-- 禁止自己执行任何AbstractProcessor -->
                     <compilerArgument>-proc:none</compilerArgument>
                 </configuration>
