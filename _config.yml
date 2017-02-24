@@ -9,7 +9,7 @@ logo:               'assets/img/logo.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             zh_CN
 url:                //justice-love.com
-staticUrl:          //justice-love.com/assets
+staticUrl:          //ojt8gkzcy.bkt.clouddn.com
 
 # Jekyll
 permalink:          /:title/
