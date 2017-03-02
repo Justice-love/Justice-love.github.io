@@ -96,6 +96,9 @@ Validation failed for object='swingFormList'. Error count: 1
 child name 为```child_id:<input type="text" name="list[0].child"/>```， 而 ```Swing.class == org.eddy.swing.entity.Swing#child.getClass()```
 spring会尝试获取参数为一个字符串类型的构造函数并newInstance
 
+### 代码修改
+将```child_id:<input type="text" name="list[0].child"/>```改为```child_id:<input type="text" name="list[0].child.id"/>```
+
 __spring代码见下方__
 
 org.springframework.beans.TypeConverterDelegate#convertIfNecessary(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Class<T>, org.springframework.core.convert.TypeDescriptor)
