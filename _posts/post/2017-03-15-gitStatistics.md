@@ -2,7 +2,7 @@
 layout: post
 title:  "Git提交统计"
 date:   2017-03-15
-excerpt: "统计你的提交记录"
+excerpt: "统计你在GitHub中的提交记录"
 tag:
 - Git
 - GitHub
