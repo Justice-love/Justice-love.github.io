@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring Boot 启动脚本"
 date:   2017-03-17
-excerpt: "脚本控制spring boot启动／重启等"
+excerpt: "脚本控制spring boot启动／停止／重启等"
 tag:
 - Git
 - GitHub
