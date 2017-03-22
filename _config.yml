@@ -27,8 +27,8 @@ sass:
   style:            compressed
 
 # Comments
-#disqus_shortname:   nzFsp8949o
-duoshuo: true
+disqus_shortname:   justice-love
+#duoshuo: true
 # Social
 # if you don't have any of social below, comment the line.
 #google:
