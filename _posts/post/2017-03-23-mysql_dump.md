@@ -9,7 +9,7 @@ tag:
 comments: true
 ---
 
-### MySql数据库备份
+### MySql数据库备份脚本
 ``` shell
 #!/bin/sh
 
