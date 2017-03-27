@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker镜像制作"
 date:   2017-03-27
-excerpt: "docker相关：制作自己的Docker镜像"
+excerpt: "Docker相关：制作自己的Docker镜像"
 tag:
 - docker
 - 运维
