@@ -148,75 +148,75 @@ comments: true
         reject(command);
   }
   ```
-
-- 通过阅读```java.util.concurrent.ThreadPoolExecutor#execute```方法可以发现，在当前线程数小于核心线程数时，默认增加一个执行线程。在执行线程数为0时，直接增加一个执行线程。其余则仅在command插入任务队列失败后时，会尝试新增执行线程。
-  ``` java
-  private boolean addWorker(Runnable firstTask, boolean core) {
-        retry:
-        for (;;) {
-            int c = ctl.get();
-            int rs = runStateOf(c);
-
-            // Check if queue empty only if necessary.
-            if (rs >= SHUTDOWN &&
-                ! (rs == SHUTDOWN &&
-                   firstTask == null &&
-                   ! workQueue.isEmpty()))
-                return false;
-
-            for (;;) {
-                int wc = workerCountOf(c);
-                if (wc >= CAPACITY ||
-                    wc >= (core ? corePoolSize : maximumPoolSize))
-                    return false;
-                if (compareAndIncrementWorkerCount(c))
-                    break retry;
-                c = ctl.get();  // Re-read ctl
-                if (runStateOf(c) != rs)
-                    continue retry;
-                // else CAS failed due to workerCount change; retry inner loop
-            }
-        }
-
-        boolean workerStarted = false;
-        boolean workerAdded = false;
-        Worker w = null;
-        try {
-            w = new Worker(firstTask);
-            final Thread t = w.thread;
-            if (t != null) {
-                final ReentrantLock mainLock = this.mainLock;
-                mainLock.lock();
-                try {
-                    // Recheck while holding lock.
-                    // Back out on ThreadFactory failure or if
-                    // shut down before lock acquired.
-                    int rs = runStateOf(ctl.get());
-
-                    if (rs < SHUTDOWN ||
-                        (rs == SHUTDOWN && firstTask == null)) {
-                        if (t.isAlive()) // precheck that t is startable
-                            throw new IllegalThreadStateException();
-                        workers.add(w);
-                        int s = workers.size();
-                        if (s > largestPoolSize)
-                            largestPoolSize = s;
-                        workerAdded = true;
-                    }
-                } finally {
-                    mainLock.unlock();
-                }
-                if (workerAdded) {
-                    t.start();
-                    workerStarted = true;
-                }
-            }
-        } finally {
-            if (! workerStarted)
-                addWorkerFailed(w);
-        }
-        return workerStarted;
-    }
-  ```
   
+    ``` java
+    private boolean addWorker(Runnable firstTask, boolean core) {
+          retry:
+          for (;;) {
+              int c = ctl.get();
+              int rs = runStateOf(c);
+  
+              // Check if queue empty only if necessary.
+              if (rs >= SHUTDOWN &&
+                  ! (rs == SHUTDOWN &&
+                     firstTask == null &&
+                     ! workQueue.isEmpty()))
+                  return false;
+  
+              for (;;) {
+                  int wc = workerCountOf(c);
+                  if (wc >= CAPACITY ||
+                      wc >= (core ? corePoolSize : maximumPoolSize))
+                      return false;
+                  if (compareAndIncrementWorkerCount(c))
+                      break retry;
+                  c = ctl.get();  // Re-read ctl
+                  if (runStateOf(c) != rs)
+                      continue retry;
+                  // else CAS failed due to workerCount change; retry inner loop
+              }
+          }
+  
+          boolean workerStarted = false;
+          boolean workerAdded = false;
+          Worker w = null;
+          try {
+              w = new Worker(firstTask);
+              final Thread t = w.thread;
+              if (t != null) {
+                  final ReentrantLock mainLock = this.mainLock;
+                  mainLock.lock();
+                  try {
+                      // Recheck while holding lock.
+                      // Back out on ThreadFactory failure or if
+                      // shut down before lock acquired.
+                      int rs = runStateOf(ctl.get());
+  
+                      if (rs < SHUTDOWN ||
+                          (rs == SHUTDOWN && firstTask == null)) {
+                          if (t.isAlive()) // precheck that t is startable
+                              throw new IllegalThreadStateException();
+                          workers.add(w);
+                          int s = workers.size();
+                          if (s > largestPoolSize)
+                              largestPoolSize = s;
+                          workerAdded = true;
+                      }
+                  } finally {
+                      mainLock.unlock();
+                  }
+                  if (workerAdded) {
+                      t.start();
+                      workerStarted = true;
+                  }
+              }
+          } finally {
+              if (! workerStarted)
+                  addWorkerFailed(w);
+          }
+          return workerStarted;
+      }
+    ```
+
+- 通过阅读```java.util.concurrent.ThreadPoolExecutor#execute```方法可以发现，在当前线程数小于核心线程数时，默认增加一个执行线程。在执行线程数为0时，直接增加一个执行线程。其余则仅在command插入任务队列失败后时，会尝试新增执行线程。 
 - 补充：大部分情况下execute()方法仅会执行```isRunning(c) && workQueue.offer(command)```后就返回，即command插入任务队列成功后即返回。
