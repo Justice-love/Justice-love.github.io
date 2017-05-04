@@ -149,7 +149,7 @@ comments: true
   }
   ```
 
-- 通过阅读```java.util.concurrent.ThreadPoolExecutor#execute```方法可以发现，在当前线程数小于核心线程数时，默认增加一个执行线程。在执行线程数为0时，直接增加一个执行线程。其余则仅在command插入进任务队列时，会尝试新增执行线程。
+- 通过阅读```java.util.concurrent.ThreadPoolExecutor#execute```方法可以发现，在当前线程数小于核心线程数时，默认增加一个执行线程。在执行线程数为0时，直接增加一个执行线程。其余则在线程数小于最大线程数时增加执行线程。
   ``` java
   private boolean addWorker(Runnable firstTask, boolean core) {
         retry:
@@ -218,5 +218,3 @@ comments: true
         return workerStarted;
     }
   ```
-  
-- 补充：大部分情况下execute()方法仅会执行```isRunning(c) && workQueue.offer(command)```后就返回，即command插入任务队列成功后即返回。
