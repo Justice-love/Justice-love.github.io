@@ -35,7 +35,13 @@ RUN curl  http://ojt8gkzcy.bkt.clouddn.com/etc/conf/shadowsocks.json -o shadowso
 CMD ssserver -c ./shadowsocks.json
 ```
 
-## 启动
+## 运行
 ``` shell
 docker run --name mine_shadowsocks -it -d -p 1988:1988 justicelove/shadowsocks:1.0
 ```
+
+## 启动/停止
+``` shell
+docker start/stop/restart mine_shadowsocks
+```
+
