@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "mybatis resultMap"
+title:  "MyBatis ResultMap"
 date:   2017-05-31
-excerpt: "mybatis中一个select节点匹配多个resultMap"
+excerpt: "一个select节点配置多个resultMap"
 tag:
 - mybatis
 - resultMap
