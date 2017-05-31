@@ -10,7 +10,7 @@ comments: true
 ---
 ## mybatis多resultMap使用场景
 
-一条SQL返回多个ResultSet，多见于调用存储过程，用于每个resultSet的关系映射。
+一条SQL返回多个ResultSet，多见于调用存储过程，用于每个resultSet做不同的关系映射。
 
 ## 写法
 ``` xml
