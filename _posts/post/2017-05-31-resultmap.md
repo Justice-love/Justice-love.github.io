@@ -21,8 +21,8 @@ comments: true
     <result column="login_name" property="loginName"/>
     <result column="create_time" property="createTime"/>
     <result column="update_time" property="updateTime"/>
-    <association property="company" column="company_id"  select="com.oceanwing.dao.mapper.CompanyMapper.selectById"/>
-    <collection property="businessEntities" column="id" select="com.oceanwing.dao.mapper.BusinessEntityMapper.selectByUserId"/>
+    <association property="company" column="company_id"  select="com.eddy.dao.mapper.CompanyMapper.selectById"/>
+    <collection property="businessEntities" column="id" select="com.eddy.dao.mapper.BusinessEntityMapper.selectByUserId"/>
 </resultMap>
 
 <resultMap id="param" type="integer">
@@ -37,7 +37,7 @@ comments: true
     <result column="title" property="title"/>
     <result column="create_time" property="createTime"/>
     <result column="update_time" property="updateTime"/>
-    <association property="company" column="company_id"  select="com.oceanwing.dao.mapper.CompanyMapper.selectById"/>
+    <association property="company" column="company_id"  select="com.eddy.dao.mapper.CompanyMapper.selectById"/>
 </resultMap>
 
 <!-- select -->
