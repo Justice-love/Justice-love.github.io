@@ -61,8 +61,8 @@ weibo:             u/3193958357
 #xmpp:              username@server.com
 #hackernews:        username
 
-# Gems
-gems:
+# plugins
+plugins:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
