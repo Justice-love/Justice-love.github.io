@@ -4,7 +4,7 @@ title: "实时股票接口"
 date: 2016-12-12
 excerpt: "一个sina的实时股票数据查询接口"
 tags: [证券, 股票, 分析, sina, 实时]
-feature: //i.imgur.com/Ds6S7lJ.png
+feature: https://i.imgur.com/Ds6S7lJ.png
 life: true
 comments: true
 ---
