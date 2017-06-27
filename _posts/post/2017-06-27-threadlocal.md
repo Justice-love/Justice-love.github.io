@@ -101,6 +101,7 @@ public class RequestContextListener implements ServletRequestListener {
 通过上面方式，使用ThreadLocal实现了请求上下文信息的绑定和销毁。
 
 ## ThreadLocal
+
 绑定在线程上的map，使用方式类似HashMap
 
 ``` java
@@ -136,3 +137,92 @@ public class RequestContextListener implements ServletRequestListener {
 
 Thread上绑定的ThreadLocalMap： java.lang.Thread#threadLocals
 
+## InheritableThreadLocal
+
+绑定在线程上的继承的ThreadLocalMap，Spring中的RequestContextHolder也是依靠他来实现请求上下文信息的线程上的继承。
+
+``` java
+    /**
+     * Get the map associated with a ThreadLocal.
+     *
+     * @param t the current thread
+     */
+    ThreadLocalMap getMap(Thread t) {
+       return t.inheritableThreadLocals;
+    }
+
+    /**
+     * Create the map associated with a ThreadLocal.
+     *
+     * @param t the current thread
+     * @param firstValue value for the initial entry of the table.
+     */
+    void createMap(Thread t, T firstValue) {
+        t.inheritableThreadLocals = new ThreadLocalMap(this, firstValue);
+    }
+```
+Thread上绑定的inheritableThreadLocals： java.lang.Thread#inheritableThreadLocals，在线程创建的时候会当前线程的inheritableThreadLocals赋值给子线程，具体位置可查看Thread的构造函数。
+
+``` java
+private void init(ThreadGroup g, Runnable target, String name,
+                      long stackSize, AccessControlContext acc) {
+        if (name == null) {
+            throw new NullPointerException("name cannot be null");
+        }
+
+        this.name = name;
+
+        Thread parent = currentThread();
+        SecurityManager security = System.getSecurityManager();
+        if (g == null) {
+            /* Determine if it's an applet or not */
+
+            /* If there is a security manager, ask the security manager
+               what to do. */
+            if (security != null) {
+                g = security.getThreadGroup();
+            }
+
+            /* If the security doesn't have a strong opinion of the matter
+               use the parent thread group. */
+            if (g == null) {
+                g = parent.getThreadGroup();
+            }
+        }
+
+        /* checkAccess regardless of whether or not threadgroup is
+           explicitly passed in. */
+        g.checkAccess();
+
+        /*
+         * Do we have the required permissions?
+         */
+        if (security != null) {
+            if (isCCLOverridden(getClass())) {
+                security.checkPermission(SUBCLASS_IMPLEMENTATION_PERMISSION);
+            }
+        }
+
+        g.addUnstarted();
+
+        this.group = g;
+        this.daemon = parent.isDaemon();
+        this.priority = parent.getPriority();
+        if (security == null || isCCLOverridden(parent.getClass()))
+            this.contextClassLoader = parent.getContextClassLoader();
+        else
+            this.contextClassLoader = parent.contextClassLoader;
+        this.inheritedAccessControlContext =
+                acc != null ? acc : AccessController.getContext();
+        this.target = target;
+        setPriority(priority);
+        if (parent.inheritableThreadLocals != null)
+            this.inheritableThreadLocals =
+                ThreadLocal.createInheritedMap(parent.inheritableThreadLocals);
+        /* Stash the specified stack size in case the VM cares */
+        this.stackSize = stackSize;
+
+        /* Set thread ID */
+        tid = nextThreadID();
+    }
+```
