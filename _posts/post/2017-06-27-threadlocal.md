@@ -15,6 +15,7 @@ comments: true
 用来将当前请求的上下文信息绑定到线程上(可只绑定到当前线程也可绑定到自线程，需配置)
 
 * context绑定方式：ThreadLocal
+
 ``` java
 	/**
 	 * Bind the given RequestAttributes to the current thread,
@@ -52,6 +53,7 @@ comments: true
 
 * ThreadLocal与线程绑定，web容器均使用线程池，为了防止请求上下文信息跨请求保持长生命周期，需定义好其生命周期。
     * 在spring中，```RequestContextListener```监听了请求的初始化和请求的销毁，并在请求的初始化在ThreadLocal绑定请求信息，在请求销毁时从ThreadLocal中移除请求信息。
+
 ``` java
 public class RequestContextListener implements ServletRequestListener {
 
