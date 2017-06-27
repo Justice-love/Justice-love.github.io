@@ -99,3 +99,40 @@ public class RequestContextListener implements ServletRequestListener {
 ```
 
 通过上面方式，使用ThreadLocal实现了请求上下文信息的绑定和销毁。
+
+## ThreadLocal
+绑定在线程上的map，使用方式类似HashMap
+
+``` java
+    public void set(T value) {
+        Thread t = Thread.currentThread();
+        ThreadLocalMap map = getMap(t);
+        if (map != null)
+            map.set(this, value);
+        else
+            createMap(t, value);
+    }
+    
+     public void remove() {
+         ThreadLocalMap m = getMap(Thread.currentThread());
+         if (m != null)
+             m.remove(this);
+     }
+     
+     public T get() {
+             Thread t = Thread.currentThread();
+             ThreadLocalMap map = getMap(t);
+             if (map != null) {
+                 ThreadLocalMap.Entry e = map.getEntry(this);
+                 if (e != null) {
+                     @SuppressWarnings("unchecked")
+                     T result = (T)e.value;
+                     return result;
+                 }
+             }
+             return setInitialValue();
+     }
+```
+
+Thread上绑定的ThreadLocalMap： java.lang.Thread#threadLocals
+
