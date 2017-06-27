@@ -95,3 +95,5 @@ public class RequestContextListener implements ServletRequestListener {
 
 }
 ```
+
+通过上面方式，使用ThreadLocal实现了请求上下文信息的绑定和销毁。
