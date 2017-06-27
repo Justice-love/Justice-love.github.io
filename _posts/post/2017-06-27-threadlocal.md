@@ -226,3 +226,7 @@ private void init(ThreadGroup g, Runnable target, String name,
         tid = nextThreadID();
     }
 ```
+
+### InheritableThreadLocal补充
+
+InheritableThreadLocal允许自定义子线程可继承的值，默认为可继承，开发人员可通过覆盖```java.lang.InheritableThreadLocal#childValue```方法来改变InheritableThreadLocal继承的行为。
