@@ -12,7 +12,7 @@ comments: true
 
 ## Spring中的RequestContextHolder
 
-用来将当前请求的上下文信息绑定到线程上(可只绑定到当前线程也可绑定到自线程，需配置)
+用来将当前请求的上下文信息绑定到线程上(可只绑定到当前线程也可绑定到子线程，需配置)
 
 * context绑定方式：ThreadLocal
 
