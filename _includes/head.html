@@ -45,6 +45,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/img/favicons/apple-icon-144x144.png">
     <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
+    <!-- video -->
+    {% if page.video %}
+    <link href="//vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/6.4.0/video.js"></script>
+    {% endif %}
     <!-- Background Image -->
     {% if site.background %}
     {% capture background %}{{ site.background }}{% endcapture %}
