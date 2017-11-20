@@ -51,7 +51,7 @@
     <script src="{{ site.staticUrl }}/video/static/video.min.js"></script>
     <script>
         var player = videojs('video', { fluid: true }, function () {
-//            this.play(); // if you don't trust autoplay for some reason
+            this.play(); // if you don't trust autoplay for some reason
         })
     </script>
     {% endif %}
