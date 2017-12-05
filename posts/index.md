@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: 工作
+title: 日志
 excerpt: "Technical documentation"
 comments: false
 ---
