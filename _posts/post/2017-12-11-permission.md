@@ -17,11 +17,16 @@ grant {
         permission java.security.AllPermission;
 };
 deny codeBase "file:/Users/xuyi/.m2/repository/org/codehaus/groovy/groovy-all/3.0.0-alpha-1/groovy-all-3.0.0-alpha-1.jar"{
-        permission org.eddy.permission.InvokePermission "t";
+        permission org.eddy.permission.InvokePermission "test";
 };
 ```
 使用AOP，对核心方法增加调用前权限验证，验证代码如下:
 ``` java
+    @Permission("test")
+    public void a() {
+        System.out.println("a");
+    }
+    
     @Before("permission()")
     public void permissionCheck(JoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
