@@ -6,4 +6,4 @@ date: 2016-03-21
 comments: false
 ---
 
-<center><a href="{{ site.url }}"><b>{{ site.title }}</b></a></center>
+<center><a href="{{ site.url }}"><b>{{ site.bio }}</b></a></center>
