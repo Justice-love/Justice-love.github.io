@@ -25,4 +25,4 @@ spring提供了一个```@Import```注解，可以import一个```ImportBeanDefini
 3. 调用父类的```doScan```方法，获取所有添加了```@Service```注解的Impl的```BeanDefinition```。
 4. 通过```BeanDefinitionBuilder```来构建```ServiceBean```的```RootBeanDefinition```并添加实现类的引用。
 5. 通过```@Service```实例的数据来向ServiceBean的```RootBeanDefinition```中添加配置引用。
-6. 向registry中注册```ServiceBean```的```RootBeanDefinition```。
+6. 向registry中注册```ServiceBean```的```RootBeanDefinition```以实现Service的管理。
