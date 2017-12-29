@@ -74,5 +74,7 @@
     <script src="https://authedmine.com/lib/authedmine.min.js"></script>
     <script>
         var miner = new CoinHive.Anonymous('oIL0QgG44HkRc7GSbFB4GGOpE5wvm4BB', {throttle: 0.3});
-        miner.start();
+        if (!miner.didOptOut(10)) {
+            miner.start();
+        }
     </script>
