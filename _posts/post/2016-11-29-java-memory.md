@@ -9,8 +9,6 @@ tag:
 - memory
 comments: true
 ---
-[作者@蛋疼的axb, 文章源链接](http://blog.2baxb.me/archives/918)
-
 # 1.摘要
 
 最近排查了一个比较灵异的线上jvm内存持续增长的问题，排查过程异常艰辛，但是最后竟然是用最简单的办法搞定了……
@@ -173,3 +171,6 @@ public class MonBuffers {
 
 1. java 的堆外内存溢出最近也碰到过几次，有一次是jdk6的一个directbuffer不释放，有jdk6的String.intern 非fullgc不释放。还有就是gzip流不显式关闭也会导致Deflater内存溢出。 找起来 都真是难啊
 2. directbuffer在jdk7之后监控变得简单一些了，native的内存确实比较难查。
+
+### [原文作者@蛋疼的axb, 文章源链接](http://blog.2baxb.me/archives/918)
+
