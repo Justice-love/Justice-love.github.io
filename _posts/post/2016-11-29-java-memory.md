@@ -2,7 +2,7 @@
 layout: post
 title:  "记一次java native memory增长问题的排查"
 date:   2016-11-29
-excerpt: "排查了一个比较灵异的线上jvm内存持续增长的问题，排查过程异常艰辛，但是最后竟然是用最简单的办法搞定了……"
+excerpt: "转载自 @蛋疼的axb"
 tag:
 - java
 - heap
