@@ -12,7 +12,7 @@
             distractionFreeMode: false,
             labels: ['comments'],
             title: '{{ page.title }}',
-            body: '{{ page.title }}'
+            body: '{{ page.title }}\n{{ site.url }}{{ post.url }}'
         });
 
         gitalk.render('gitalk-container');
