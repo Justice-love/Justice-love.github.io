@@ -45,7 +45,7 @@ layout: compress
             </div>
         </div>
         <!--{% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section>&lt;!&ndash; /#disqus_thread &ndash;&gt;{% endif %}-->
-        {% if page.comments %}<div id="gitalk-container"></div>{% endif %}
+        {% if page.comments %}<div>{% include github_comments.html %}</div>{% endif %}
     </header>
     {% include scripts.html %}
     {% if site.mathjax == true %}
