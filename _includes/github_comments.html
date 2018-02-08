@@ -3,6 +3,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script type="text/javascript">
+        var id = document.URL;
+        if (id.indexOf('?') > 0) {
+            id = id.substr(0, id.indexOf('?'));
+        }
         const gitalk = new Gitalk({
             clientID: '94ea015a2463191dc163',
             clientSecret: '5fba2b9dc7bf84584dd7a7d8d070e3c0e9d260bf',
@@ -11,7 +15,8 @@
             admin: ['Justice-love'],
             distractionFreeMode: false,
             labels: ['comments'],
-            title: '{{ page.title }}'
+            title: '{{ page.title }}',
+            id: id
         });
 
         gitalk.render('gitalk-container');
