@@ -2,7 +2,7 @@
 layout: post
 title:  "博客服务器迁移"
 date:   2018-03-08
-excerpt: "博客服务器迁移告知测试文档"
+excerpt: "博客服务器迁移告知及测试文档"
 tag:
 - server migration
 comments: true
