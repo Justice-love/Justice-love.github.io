@@ -13,4 +13,4 @@ comments: true
 * 首先查询制卡状态，在[http://www.cs12333.com](http://www.cs12333.com)上查询，快速通道入口——用户类型——个人用户——账户类型——普通用户——输入身份证号码——初始密码为身份证号码后六位——社保卡信息
 
 ### 公积金
-* 长沙公积金查询网站[http://www.csgjj.com.cn:8001/login.do](http://www.csgjj.com.cn:8001/login.do)
+* 长沙公积金查询网站[https://www.csgjj.com.cn:8001/login.do](https://www.csgjj.com.cn:8001/login.do)
