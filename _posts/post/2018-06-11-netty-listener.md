@@ -13,7 +13,7 @@ comments: true
 * channelPromise：继承了channelFuture，新增了setSuccess，trySuccess，setFailure方法，用来后期定义某一个异步流程的最终结果。
 * listener：为一个异步流程配置监听。
 
-在netty中，每个异步流程都会添加一个Promise，用来管理当前异步流程的状态，以向channel中写数据为例：
+**在netty中，每个异步流程都会添加一个Promise，用来管理当前异步流程的状态，以向channel中写数据为例：**
 
 1. 如果写数据没有主动传入promise，netty会默认生成一个。
     ``` java
