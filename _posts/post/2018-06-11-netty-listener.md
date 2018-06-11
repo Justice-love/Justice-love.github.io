@@ -2,7 +2,7 @@
 layout: post
 title:  "netty 异步listener机制"
 date:   2018-06-11
-excerpt: "netty异步回调相关学习整理"
+excerpt: "netty异步回调机制相关学习整理"
 feature: https://i.imgur.com/Ds6S7lJ.png
 tag:
 - netty
