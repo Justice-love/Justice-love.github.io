@@ -35,3 +35,7 @@ NioEventLoop实现了一个run()方法，这个方法的实现是一个无限循
 ## selector
 
 NioEventLoop中管理的selector是netty在NioEventLoop初始化是新建的SelectedSelectionKeySetSelector，为一个代理的target。这个selector和EventLoop间的交互使用的是共同持有的selectionKeys引用。
+
+## 总结
+
+NioEventLoop使用的是task队列和schedule队列来保证提交任务无需启动新的线程，而NioEventLoop线程会永久不停的去尝试poll任务队列中的待执行的任务并执行。并且，每次循环同样会尝试获取已准备就绪键集用以数据的读取。
