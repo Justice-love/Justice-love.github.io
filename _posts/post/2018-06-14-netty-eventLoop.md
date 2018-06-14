@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "netty NioEventLoop线程模型初探"
+title:  "NioEventLoop线程模型初探"
 date:   2018-06-14
-excerpt: "netty NioEventLoop线程模型相关学习整理"
+excerpt: "NioEventLoop线程模型相关学习整理"
 feature: https://i.imgur.com/Ds6S7lJ.png
 tag:
 - netty
