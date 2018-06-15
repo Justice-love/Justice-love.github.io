@@ -32,6 +32,34 @@ NioEventLoop实现了一个run()方法，这个方法的实现是一个无限循
 2. 如果存在已选择键集，则处理selectionKey
 3. 执行所有task
 
+## 读和写
+
+netty的所有读都是在EventLoop线程中完成的，而在netty3中，写请求是允许由其他线程来进行，以通过多线程读写分离来提升效率。而在netty4中，改有读写需由EventLoop线程来处理，这样是为了解决handler中临界变量可能会面临的多线程问题。具体代码见下方。
+``` java
+    io.netty.channel.AbstractChannelHandlerContext#write(java.lang.Object, boolean, io.netty.channel.ChannelPromise)
+    
+    private void write(Object msg, boolean flush, ChannelPromise promise) {
+        AbstractChannelHandlerContext next = findContextOutbound();
+        final Object m = pipeline.touch(msg, next);
+        EventExecutor executor = next.executor();
+        if (executor.inEventLoop()) {
+            if (flush) {
+                next.invokeWriteAndFlush(m, promise);
+            } else {
+                next.invokeWrite(m, promise);
+            }
+        } else {
+            AbstractWriteTask task;
+            if (flush) {
+                task = WriteAndFlushTask.newInstance(next, m, promise);
+            }  else {
+                task = WriteTask.newInstance(next, m, promise);
+            }
+            safeExecute(executor, task, promise, m);
+        }
+    }
+```
+
 ## selector
 
 NioEventLoop中管理的selector是netty在NioEventLoop初始化是新建的SelectedSelectionKeySetSelector，为一个代理的target。这个selector和EventLoop间的交互使用的是共同持有的selectionKeys引用。
