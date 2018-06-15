@@ -36,7 +36,7 @@ NioEventLoop实现了一个run()方法，这个方法的实现是一个无限循
 
 netty的所有读都是在EventLoop线程中完成的，而在netty3中，写请求是允许由其他线程来进行，以通过多线程读写分离来提升效率。而在netty4中，改为读写都需由EventLoop线程来处理，这样是为了解决handler中临界变量可能会面临的多线程问题。具体代码见下方。
 ``` java
-    io.netty.channel.AbstractChannelHandlerContext#write(java.lang.Object, boolean, io.netty.channel.ChannelPromise)
+    位置：io.netty.channel.AbstractChannelHandlerContext#write(java.lang.Object, boolean, io.netty.channel.ChannelPromise)
     
     private void write(Object msg, boolean flush, ChannelPromise promise) {
         AbstractChannelHandlerContext next = findContextOutbound();
