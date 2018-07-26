@@ -11,6 +11,7 @@ comments: true
 ## 数据库事务管理需求
 
 * 事务是可嵌套可重入的，如以下案例：
+
 ``` java
 // 准备
 @Transactional
