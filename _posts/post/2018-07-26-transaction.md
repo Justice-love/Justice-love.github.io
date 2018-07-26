@@ -12,25 +12,25 @@ comments: true
 
 * 事务是可嵌套可重入的，如以下案例：
 
-``` java
-// 准备
-@Transactional
-public void methodA(){}
+    ``` java
+    // 准备
+    @Transactional
+    public void methodA(){}
 
-@Transactional
-public void methodB(){
-    methodA();
-}
+    @Transactional
+    public void methodB(){
+        methodA();
+    }
 
-// 场景1
-methodA()
+    // 场景1
+    methodA()
 
-//场景2
-methodB()
+    //场景2
+    methodB()
 
-```
+    ```
 
-> 以上两个场景，均需对事务进行管理。场景一，只调用了methodA，由methodA来管理事务；场景二，同时调用了methodA和methodB，两个方法都可以进行事务管理，但此处methodB范围更广，由methodB管理事务。
+    > 以上两个场景，均需对事务进行管理。场景一，只调用了methodA，由methodA来管理事务；场景二，同时调用了methodA和methodB，两个方法都可以进行事务管理，但此处methodB范围更广，由methodB管理事务。
     
 * 事务范围自由选择，开发者根据实际业务需求限定事务的范围。
 * 同一个请求可指定多个事务管理器，每一个事务管理器相互隔离，方便多数据源或者嵌套隔离，比如：
