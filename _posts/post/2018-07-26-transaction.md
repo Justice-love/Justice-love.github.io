@@ -32,6 +32,7 @@ methodB()
 ```
 * 事务范围自由选择，开发者根据实际业务需求限定事务的范围。
 * 同一个请求可指定多个事务管理器，每一个事务管理器相互隔离，方便多数据源或者嵌套隔离，比如：
+
 ``` java
 @Transactional(transactionManager = "transactionManagerA")
 public void methodA(){}
