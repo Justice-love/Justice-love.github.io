@@ -58,4 +58,3 @@ comments: true
     2. 创建`TransactionStatus`，根据当前线程上下文中的`ConnectionHolder`是否存在和其状态来定义`TransactionStatus`的状态，如果`ConnectionHolder`是新建的，则`TransactionStatus`状态也为新建的。
 * 事务结束时，由`TransactionManager`判断`TransactionStatus`是否为new状态，以决定是否commit操作。通过`TransactionObject`中持有的`ConnectionHolder`，对数据库链接执行相应操作。
 * 执行结束，对数据进行回收清理操作，主要是对`ConnectionHolder`中的事务的状态，比如savePoint和active状态等。
-* 注意，事务是不负责对连接进行释放的。
