@@ -17,6 +17,7 @@ comments: true
 示例:
 
 输入: ["flower","flow","flight"]
+
 输出: "fl"
 
 ## 解析
