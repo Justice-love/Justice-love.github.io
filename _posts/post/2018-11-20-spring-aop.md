@@ -62,6 +62,7 @@ AOP的XML实现，主要是基于spring的xml扩展来实现的，打开`spring-
 注解实现和XML实现基本逻辑大致相同，但也有几点不一样，
 1. `AdvisorAutoProxyCreator`注册方式，是通过`EnableAspectJAutoProxy`注解来import的，注册的是`AnnotationAwareAspectJAutoProxyCreator`
 2. `Advisor`并不是在初始化的时候注册到BeanFactory中，而是`AnnotationAwareAspectJAutoProxyCreator`重写了`findCandidateAdvisors`方法，在尝试生成实例时，通过`aspectJAdvisorsBuilder`解析生成所有的`Advisor`，并且和xml实现不同，生成的advisor不会注册到beanFactory中。
+
 ``` java
 	protected List<Advisor> findCandidateAdvisors() {
 		// Add all the Spring advisors found according to superclass rules.
