@@ -44,3 +44,7 @@ public class AnnAspect {
     }
 }
 ```
+
+## AOP XML实现
+
+AOP的XML实现，主要是基于spring的xml扩展来实现的，打开`spring-aop`包，可以看到`META-INF`文件夹下的`spring.schemas`和`spring.handlers`，其中的`spring.handlers`就是对AOP的XML进行的解析。
