@@ -31,4 +31,4 @@ JPA是通过@Import注解来注入`ImportBeanDefinitionRegistrar`实现自定义
 
 ## 整体流程
 
-对于像JPA或者Mybatis这样的框架，具体的执行逻辑都是通过动态代理来实现，而如果要运行在`spring context`之上，则需要实现自己的scanner逻辑来进行接口类的扫描和动态代理类的注册，从而可以使用spring ioc的方式来进行Repository的注入和调用。
+对于像JPA或者Mybatis这样的框架，具体的执行逻辑都是通过动态代理来实现，而如果要运行在`spring context`之上，则需要实现自己的`scanner`逻辑来进行接口类的扫描和动态代理类的注册，从而可以使用spring ioc的方式来进行Repository的注入和调用。
