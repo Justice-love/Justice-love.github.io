@@ -19,16 +19,16 @@ spring默认的通过包扫描初始化Bean的方式对接口类型是无效的�
 
 JPA是通过@Import注解来注入`ImportBeanDefinitionRegistrar`实现自定义规则的扫描注入。Registrar实现：`JpaRepositoriesAutoConfigureRegistrar`。
 
-`AbstractRepositoryConfigurationSourceSupport`实现了registerBeanDefinitions，用以扫描并注册Repository的实例。
+`AbstractRepositoryConfigurationSourceSupport`实现了`registerBeanDefinitions`，用以扫描并注册Repository的实例。
 
 ## 动态代理
 
-默认情况下，所有的接口实例均为`JpaRepositoryFactoryBean`，这是一个FactoryBean，而对于调用`getObject`方法获取的实际对象实例，则最终通过`JpaRepositoryFactory`的getRepository方法来生成。
+默认情况下，所有的接口实例均为`JpaRepositoryFactoryBean`，这是一个FactoryBean，而对于调用`getObject`方法获取的实际对象实例，则最终通过`JpaRepositoryFactory`的`getRepository`方法来生成。
 
 实际的Repository，是通过`ProxyFactory`生成的一个动态代理类，目标对象是最基本的`SimpleJpaRepository`。对于JPA中的查询的自动扩展，则是以来一个重要的拦截器`QueryExecutorMethodInterceptor`，这个拦截器负责初始化方法对应的查询和当前代理类方法调用判断，是否使用生成的查询语句来执行查询逻辑。
 
-当然，对应的查询语句的生成也在QueryExecutorMethodInterceptor里面，这个类会在初始化是将接口的方法根据需要生成对应的RepositoryQuery。
+当然，对应的查询语句的生成也在`QueryExecutorMethodInterceptor`里面，这个类会在初始化是将接口的方法根据需要生成对应的`RepositoryQuery`。
 
 ## 整体流程
 
-对于像JPA或者Mybatis这样的框架，具体的执行逻辑都是通过动态代理来实现，而如果要运行在spring context之上，则需要实现自己的scanner逻辑来进行接口类的扫描和动态代理类的注册，从而可以使用spring ioc的方式来进行Repository的注入和调用。
+对于像JPA或者Mybatis这样的框架，具体的执行逻辑都是通过动态代理来实现，而如果要运行在`spring context`之上，则需要实现自己的scanner逻辑来进行接口类的扫描和动态代理类的注册，从而可以使用spring ioc的方式来进行Repository的注入和调用。
