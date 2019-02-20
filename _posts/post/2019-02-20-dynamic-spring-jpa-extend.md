@@ -24,3 +24,5 @@ comments: true
 3. `JpaQueryLookupStrategy`和`JpaQueryFactory`，是`JpaQuery`的查询和生成类，对其的改造很直接，则是在`JpaQueryLookupStrategy`解析`JpaQuery`的最后，添加一段`JpaQueryFactory`尝试通过注册中心方式生成对应`JpaQuery`的代码。
 4. 定义新的`JpaQuery`，比如我基于`NativeJpaQuery`扩展的`AutoJpaQuery`，定义好需要的`Query`生成逻辑，这里需要使用响应的模版语言对SQL脚本进行解析，并且，可能需要依据需要定义一下`ParameterBinder`的生成逻辑，因为默认情况下，是依据查询SQL来生成`ParameterBinder`的，如果一开始只能获取到SQL脚本，可能导致生成`ParameterBinder`失败，就需要对`ParameterBinder`生成方式进行修改。
 5. `ParameterBinder`改造，因为默认情况下SQL中的参数和方法传参是一一对应的，如果无法保证对应，比如我这种情况，就需要修改`ParameterBinder`的bing逻辑，对不匹配的参数直接舍弃。
+
+当然，改造完成之后，不要忘记跑一边原来的单元测试，并且添加新功能的单元测试。
