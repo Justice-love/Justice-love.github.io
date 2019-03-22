@@ -3,7 +3,7 @@ layout: post
 title:  "spring jpa扩展改造"
 date:   2019-02-20
 excerpt: "对spring jpa的扩展改造"
-feature: https://i.imgur.com/Ds6S7lJ.png
+feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - spring jpa
 comments: true

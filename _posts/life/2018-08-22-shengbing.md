@@ -4,7 +4,7 @@ title: "最近生病啦"
 date: 2018-08-22
 excerpt: "生病的感觉真不好"
 tags: [生病]
-feature: https://i.imgur.com/Ds6S7lJ.png
+feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

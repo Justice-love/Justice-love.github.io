@@ -3,7 +3,7 @@ layout: post
 title:  "博客服务器迁移"
 date:   2018-03-08
 excerpt: "博客服务器迁移告知及测试文档"
-feature: https://i.imgur.com/Ds6S7lJ.png
+feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - server migration
 comments: true

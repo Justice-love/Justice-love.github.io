@@ -3,7 +3,7 @@ layout: post
 title:  "动态数据源"
 date:   2019-01-11
 excerpt: "基于spring和mybatis实现动态切换数据源"
-feature: https://i.imgur.com/Ds6S7lJ.png
+feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - dynamic datasource
 comments: true
