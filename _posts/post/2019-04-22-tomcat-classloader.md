@@ -23,5 +23,5 @@ Tomcat的Classloader是在系统基础上自定义的，默认情况下打破了
 
 * Tomcat Classloader简易模型为：ExtClassloader（Java默认的classlaoder）--》UrlClassloader（common lib包加载器）——》WebAppClassloader（app加载器）
 
-默认情况下，WebAppClassloader会先尝试使用ExtClassloader来加载JDK提供的基础类，并且，对于Servlet API也会进行过滤，所以App中添加Servlet的jar会不起效果。WebAppClassloader会尝试加载类，如果无法加载才会委托给parent classloader来进行加载。
+默认情况下，WebAppClassloader会先尝试使用ExtClassloader来加载JDK提供的基础类，并且，对于Servlet API也会进行过滤，所以App中添加Servlet的jar会不起效果。WebAppClassloader会尝试加载类，如果无法加载才会委托给parent classloader来进行加载。默认的，Tomcat现在WebAppClassloader的实现使用的是ParallelWebappClassLoader，使用JDK提供的能力来进行并发的加载类.
 
