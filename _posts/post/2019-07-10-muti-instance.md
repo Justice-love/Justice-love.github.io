@@ -9,7 +9,7 @@ tag:
 comments: true
 ---
 
-今天遇到了一个因class类多实例而导致的类型匹配失败的问题，现在记录一下这个问题的排查过程。
+> 今天遇到了一个因class类多实例而导致的类型匹配失败的问题，现在记录一下这个问题的排查过程。
 
 ### 问题表象：spring未自动注入
 
@@ -31,7 +31,7 @@ comments: true
 
 ### 问题排查
 
-通过ApplicationContext来主动获取bean实例，发现，通过名称可以正常获取自定义的bean，而限定了类型，则会获取失败。通过`instanceof`判断，也返回False，查看类的接口信息，从类信息上来看和其他CustomizeTemplate没有差别。
+通过ApplicationContext来主动获取bean实例，发现，通过名称可以正常获取自定义的bean，而限定了类型，则会获取失败。通过`instanceof`判断，也返回False，查看类的接口信息，从类信息上来看和其他定义的CustomizeTemplate没有差别。
 
 猜想：CustomizeTemplate的class类存在多实例<br/>
 验证：查看对应的类信息，以下截图是class类信息
@@ -43,4 +43,4 @@ comments: true
 
 ### 问题解决
 
-查看初始化线程对应的Classloader，发现使用了spring-boot-devtools的RestartClassLoader，将devtools依赖去掉，问题暂时解决。这几天对devtools有更深入的了解之后，在做出更合适的处理。
+查看初始化线程对应的Classloader，发现使用了spring-boot-devtools的RestartClassLoader，将devtools依赖去掉，问题暂时解决。过几天对devtools有更深入的了解之后，在做出更合适的处理。
