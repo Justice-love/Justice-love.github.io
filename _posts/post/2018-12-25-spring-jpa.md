@@ -11,7 +11,7 @@ comments: true
 
 ## JPA配置启动类
 
-和绝大多数的spring组件一样，JPA的启动是从`spring.factories`开始的，初始化配置类是`JpaRepositoriesAutoConfiguration`.factories文件是在`spring-boot-autoconfigure`包中。
+和绝大多数的spring组件一样，JPA的启动是从`spring.factories`开始的，初始化配置类是`JpaRepositoriesAutoConfiguration.factories`文件是在`spring-boot-autoconfigure`包中。
 
 ## 接口扫描
 
