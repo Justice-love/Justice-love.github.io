@@ -37,4 +37,36 @@ Java Agent是JVM提供的代理，可以用过添加JVM启动参数指定，也�
             .transform(new Transformer(pluginFinder))
             .with(new Listener())
             .installOn(instrumentation);
+
+    private static class Transformer implements AgentBuilder.Transformer {
+        private PluginFinder pluginFinder;
+
+        Transformer(PluginFinder pluginFinder) {
+            this.pluginFinder = pluginFinder;
+        }
+
+        @Override
+        public DynamicType.Builder<?> transform(DynamicType.Builder<?> builder, TypeDescription typeDescription,
+            ClassLoader classLoader, JavaModule module) {
+            List<AbstractClassEnhancePluginDefine> pluginDefines = pluginFinder.find(typeDescription);
+            if (pluginDefines.size() > 0) {
+                DynamicType.Builder<?> newBuilder = builder;
+                EnhanceContext context = new EnhanceContext();
+                for (AbstractClassEnhancePluginDefine define : pluginDefines) {
+                    DynamicType.Builder<?> possibleNewBuilder = define.define(typeDescription, newBuilder, classLoader, context);
+                    if (possibleNewBuilder != null) {
+                        newBuilder = possibleNewBuilder;
+                    }
+                }
+                if (context.isEnhanced()) {
+                    logger.debug("Finish the prepare stage for {}.", typeDescription.getName());
+                }
+
+                return newBuilder;
+            }
+
+            logger.debug("Matched class {}, but ignore by finding mechanism.", typeDescription.getTypeName());
+            return builder;
+        }
+    }
 ```
