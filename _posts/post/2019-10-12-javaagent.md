@@ -98,3 +98,5 @@ bytebuddy提供的DynamicType.Builder能够方便直观的按照平常的java编
                             .to(new StaticMethodsInter(interceptor))
                     );
 ```
+
+总的来说，Java Agent提供了一种无侵入式的服务扩展能力，而bytebuddy让开发人员无需使用复杂的asm或者Javassist包就能快速对class字节码进行扩展。
