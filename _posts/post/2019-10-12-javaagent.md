@@ -19,6 +19,7 @@ Java Agent是JVM提供的代理，可以用过添加JVM启动参数指定，也�
 使用bytebuddy快速实现class扩展，屏蔽了asm或者Javassist操作字节码所需的class相关知识，下面直接上代码展示：
 
 ```java
+        //创建AgentBuilder
         final ByteBuddy byteBuddy = new ByteBuddy()
             .with(TypeValidation.of(Config.Agent.IS_OPEN_DEBUGGING_CLASS));
 
@@ -37,7 +38,8 @@ Java Agent是JVM提供的代理，可以用过添加JVM启动参数指定，也�
             .transform(new Transformer(pluginFinder))
             .with(new Listener())
             .installOn(instrumentation);
-
+    
+    //定义class Transformer
     private static class Transformer implements AgentBuilder.Transformer {
         private PluginFinder pluginFinder;
 
