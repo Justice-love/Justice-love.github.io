@@ -72,3 +72,29 @@ Java Agent是JVM提供的代理，可以用过添加JVM启动参数指定，也�
         }
     }
 ```
+
+bytebuddy提供的DynamicType.Builder能够方便直观的按照平常的java编码方式进行字节码扩展
+
+```java
+//对构造函数扩展
+                newClassBuilder = newClassBuilder.constructor(constructorInterceptPoint.getConstructorMatcher()).intercept(SuperMethodCall.INSTANCE
+                    .andThen(MethodDelegation.withDefaultConfiguration()
+                        .to(new ConstructorInter(constructorInterceptPoint.getConstructorInterceptor(), classLoader))
+                    )
+                );
+
+//对方法扩展
+                    newClassBuilder =
+                        newClassBuilder.method(junction)
+                            .intercept(
+                                MethodDelegation.withDefaultConfiguration()
+                                    .to(new InstMethodsInter(interceptor, classLoader))
+                    );
+
+//对静态方法扩展
+                newClassBuilder = newClassBuilder.method(isStatic().and(staticMethodsInterceptPoint.getMethodsMatcher()))
+                    .intercept(
+                        MethodDelegation.withDefaultConfiguration()
+                            .to(new StaticMethodsInter(interceptor))
+                    );
+```
