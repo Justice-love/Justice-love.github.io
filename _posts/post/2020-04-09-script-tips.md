@@ -16,6 +16,7 @@ comments: true
 ## 解决方案
 
 通过echo模拟标准输入，配合管道将起传递给等待标准输入的指令，如：
+
 * echo "yes" | /redis/src/redis-cli --cluster create  --cluster-replicas 0 173.17.0.2:7000 173.17.0.3:7001 173.17.0.4:7002
 * echo "y" | yum install telnet
 
