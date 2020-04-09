@@ -37,7 +37,7 @@ docker网络驱动分成五种不同的类型，分别是`bridge, host, overlay,
 2. 创建容器时指定：docker run 时通过`--network`参数来指定加入的网络
  
 ### docker-compse
-在docker-compse.yml文件中，通过networks配置项来设置网络相关配置，默认情况下会创建网络，添加`external: true`配置，使用外部网络
+在docker-compse.yml文件中，通过networks配置项来设置网络相关属性，默认情况下会创建网络，添加`external: true`配置，使用外部网络
 ```
 version: '3.7'
 networks:
