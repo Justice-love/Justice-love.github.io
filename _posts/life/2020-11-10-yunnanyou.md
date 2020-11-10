@@ -21,4 +21,5 @@ comments: true
     <img src="{{ site.staticUrl }}/image/yunnan/yunnanyou7.JPG?imageMogr2/auto-orient" />
     <img src="{{ site.staticUrl }}/image/yunnan/yunnanyou8.jpg?imageMogr2/auto-orient" />
     <img src="{{ site.staticUrl }}/image/yunnan/yunnanyou9.jpg?imageMogr2/auto-orient" />
+    <img src="{{ site.staticUrl }}/image/yunnan/yunnanyou10.jpeg?imageMogr2/auto-orient" />
 </figure>
