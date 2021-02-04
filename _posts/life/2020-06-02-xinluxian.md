@@ -11,5 +11,5 @@ comments: true
 现在把跑步时间从晚上改到了早上，最近上班挺忙的，晚上怕没时间。这条路线是在金星路找的一条上坡路段，现在可以重复跑破4次了。
 {: .notice}
 <figure>
-    <img src="{{ site.staticUrl }}/image/jpg/paobuxinluxian.jpg?imageMogr2/auto-orient" />
+    <img src="{{ site.staticUrl }}/image/jpg/paobuxinluxian.jpg" />
 </figure>

@@ -11,5 +11,5 @@ comments: true
 从高处俯拍梅溪湖文化艺术中心，还可以看到远处的岳麓山和IFS
 {: .notice}
 <figure>
-    <img src="{{ site.staticUrl }}/image/jpeg/meixihuyejing0.jpeg?imageMogr2/auto-orient" />
+    <img src="{{ site.staticUrl }}/image/jpeg/meixihuyejing0.jpeg" />
 </figure>

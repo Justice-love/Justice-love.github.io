@@ -36,8 +36,8 @@ comments: true
 猜想：CustomizeTemplate的class类存在多实例<br/>
 验证：查看对应的类信息，以下截图是class类信息
 <figure>
-    <img src="{{ site.staticUrl }}/image/jpg/mutiinstance1.jpg?imageMogr2/auto-orient" />
-    <img src="{{ site.staticUrl }}/image/jpg/mutiinstance2.jpg?imageMogr2/auto-orient" />
+    <img src="{{ site.staticUrl }}/image/jpg/mutiinstance1.jpg" />
+    <img src="{{ site.staticUrl }}/image/jpg/mutiinstance2.jpg" />
 </figure>
 通过上图可以发现，的确CustomizeTemplate class具有不同的两个实例。
 
