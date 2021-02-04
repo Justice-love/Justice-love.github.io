@@ -4,7 +4,7 @@ title: "云南团建"
 date: 2020-11-10
 excerpt: "丽江&大理团建"
 tags: [丽江,大理]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

@@ -4,7 +4,7 @@ title: "量化交易"
 date: 2019-08-01
 excerpt: "新的研究方向，量化交易"
 tags: [量化交易]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

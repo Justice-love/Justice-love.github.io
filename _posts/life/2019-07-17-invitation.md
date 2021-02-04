@@ -4,7 +4,7 @@ title: "收到开源社区邀请"
 date: 2019-07-17
 excerpt: "收到seata开源社区管理者邀请，共同参与项目的开发"
 tags: [开心]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

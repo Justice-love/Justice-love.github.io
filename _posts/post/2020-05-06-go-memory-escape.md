@@ -3,7 +3,7 @@ layout: post
 title:  "内存逃逸"
 date:   2020-05-06
 excerpt: "golang内存逃逸简析"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - memory escape
 comments: true

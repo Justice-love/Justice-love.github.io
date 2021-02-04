@@ -4,7 +4,7 @@ title: "社保"
 date: 2017-01-20
 excerpt: "长沙社保事项记录"
 tags: [social security]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

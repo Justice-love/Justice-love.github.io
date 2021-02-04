@@ -3,7 +3,7 @@ layout: post
 title:  "Maven仓库理解"
 date:   2018-06-06
 excerpt: "理解maven拉去jar包仓库配置的优先级"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - maven
 comments: true

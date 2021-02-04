@@ -3,7 +3,7 @@ layout: post
 title:  "NoClassDefFoundError问题分析"
 date:   2018-09-19
 excerpt: "记录一下昨天自己代码原因产生的一个错误"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - NoClassDefFoundError
 comments: true

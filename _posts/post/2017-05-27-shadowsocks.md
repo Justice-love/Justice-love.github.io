@@ -31,7 +31,7 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 RUN python get-pip.py
 RUN pip install --upgrade pip
 RUN pip install shadowsocks
-RUN curl  https://static.justice-love.com/etc/conf/shadowsocks.json -o shadowsocks.json
+RUN curl  https://cdn.justice-love.com/etc/conf/shadowsocks.json -o shadowsocks.json
 CMD ssserver -c ./shadowsocks.json
 ```
 

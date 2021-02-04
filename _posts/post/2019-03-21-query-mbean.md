@@ -3,7 +3,7 @@ layout: post
 title:  "查询Mbean"
 date:   2019-03-21
 excerpt: "依据设置的条件查询Mbean"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - Mbean
 comments: true

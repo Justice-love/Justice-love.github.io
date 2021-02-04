@@ -3,7 +3,7 @@ layout: post
 title:  "netty 异步listener机制"
 date:   2018-06-11
 excerpt: "netty异步回调机制相关学习整理"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - netty
 comments: true

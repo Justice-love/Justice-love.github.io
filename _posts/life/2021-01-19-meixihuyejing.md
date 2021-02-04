@@ -4,7 +4,7 @@ title: "梅溪湖夜景"
 date: 2021-01-19
 excerpt: "从高处俯拍梅溪湖"
 tags: [梅溪湖,夜景]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

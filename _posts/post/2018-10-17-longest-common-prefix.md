@@ -3,7 +3,7 @@ layout: post
 title:  "求最长公共前缀"
 date:   2018-10-17
 excerpt: "leetCode题目解析"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - python
 - leetCode

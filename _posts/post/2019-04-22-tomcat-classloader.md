@@ -3,7 +3,7 @@ layout: post
 title:  "Tomcat Classloader"
 date:   2019-04-22
 excerpt: "学习Tomcat的类加载模式"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - Tomcat Classloader
 comments: true

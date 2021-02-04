@@ -3,7 +3,7 @@ layout: post
 title:  "数据库事务管理实现"
 date:   2018-07-26
 excerpt: "基于spring，简述事务的管理方式"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - transaction
 comments: true

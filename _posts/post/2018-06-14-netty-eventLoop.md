@@ -3,7 +3,7 @@ layout: post
 title:  "NioEventLoop线程模型初探"
 date:   2018-06-14
 excerpt: "NioEventLoop线程模型相关学习整理"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - netty
 comments: true

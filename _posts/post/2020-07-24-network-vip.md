@@ -3,7 +3,7 @@ layout: post
 title:  "虚拟IP"
 date:   2020-07-24
 excerpt: "网络VIP记录简述"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - network
 - vip

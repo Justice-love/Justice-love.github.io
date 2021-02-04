@@ -3,7 +3,7 @@ layout: post
 title:  "Spring AOP"
 date:   2018-11-21
 excerpt: "简述Spring AOP相关代码"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - aop
 comments: true

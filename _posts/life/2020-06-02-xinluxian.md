@@ -4,7 +4,7 @@ title: "跑步新路线"
 date: 2020-06-02
 excerpt: "金星路上找了条新的晨跑路线"
 tags: [跑步]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 life: true
 comments: true
 ---

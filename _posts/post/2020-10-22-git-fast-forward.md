@@ -3,7 +3,7 @@ layout: post
 title:  "Git Fast Forward"
 date:   2020-10-22
 excerpt: "git revert fast forward"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - git
 comments: true

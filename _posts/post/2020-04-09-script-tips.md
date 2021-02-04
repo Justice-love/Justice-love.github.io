@@ -3,7 +3,7 @@ layout: post
 title:  "shell脚本技巧"
 date:   2020-04-09
 excerpt: "脚本场景绕过等待标准输入的小技巧"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - shell tips
 comments: true

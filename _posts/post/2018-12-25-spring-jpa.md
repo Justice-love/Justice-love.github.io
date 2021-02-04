@@ -3,7 +3,7 @@ layout: post
 title:  "Spring JPA"
 date:   2018-12-25
 excerpt: "简述Spring JPA相关代码"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - jpa
 comments: true

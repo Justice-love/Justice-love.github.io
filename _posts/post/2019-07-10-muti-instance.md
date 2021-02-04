@@ -3,7 +3,7 @@ layout: post
 title:  "记录遇到的一个问题"
 date:   2019-07-10
 excerpt: "如题"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - classloader
 comments: true

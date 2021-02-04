@@ -4,7 +4,7 @@ title: "Post with Image Feature"
 date: 2012-05-23
 excerpt: "A ton of text to test readability with image feature."
 tags: [sample post, readability, test, image, feature]
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 comments: true
 ---
 

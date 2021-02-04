@@ -3,7 +3,7 @@ layout: post
 title:  "索引表"
 date:   2020-06-14
 excerpt: "索引表使用场景和介绍"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - index table
 comments: true

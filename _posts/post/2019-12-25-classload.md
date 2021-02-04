@@ -3,7 +3,7 @@ layout: post
 title:  "关于类加载的一个问题"
 date:   2019-12-25
 excerpt: "threadContextClassLoader的必要性"
-feature: https://static.justice-love.com/image/jpg/bjfj1.jpg
+feature: https://cdn.justice-love.com/image/jpg/bjfj1.jpg
 tag:
 - classLoader
 comments: true
