@@ -10,6 +10,7 @@ tiled_bg:           false   # Set this true if you want to tile your background 
 locale:             zh_CN
 url:                //justice-love.com
 staticUrl:          //cdn.justice-love.com
+basicStaticUrl:     //cdn.justice-love.com
 beian:              湘ICP备2021001965号
 
 # Jekyll
