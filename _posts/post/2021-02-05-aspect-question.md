@@ -15,7 +15,7 @@ comments: true
 {: .notice}
 问：那这个方法需要怎么切，使用aspectj吗
 {: .notice}
-答：aspectj是编译时编制，slf4j是通过jar包引入，是编译后文件，无法生效
+答：aspectj是编译时编织，slf4j是通过jar包引入，是编译后文件，无法生效
 {: .notice}
 问：那能使用什么方式？
 {: .notice}
