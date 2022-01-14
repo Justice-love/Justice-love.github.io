@@ -11,5 +11,5 @@ comments: true
 在望城斑马湖公园玩了一趟，绿树湖水很舒服
 {: .notice}
 <figure>
-    <img src="{{ site.staticUrl }}/image/shenlingongyuan.HEIC" />
+    <img src="{{ site.staticUrl }}/image/jpeg/senlingongyuan.jpeg" />
 </figure>
