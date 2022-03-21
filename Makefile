@@ -1,7 +1,7 @@
 .PHONY: build push
 
 push:
-	@git pull gitlab master:master
+	@git pull gitlab master
 	@git push  gitlab master:master
 
 build: push
