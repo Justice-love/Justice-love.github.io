@@ -7,6 +7,4 @@ push:
 build: push
 	@echo "begin build"
 	@ssh root@tencent-cvm.com "bash /opt/pages/build.sh"
-
-html: build
 	@ssh root@tencent-cvm.com "bash /opt/pages/www/push.sh"
