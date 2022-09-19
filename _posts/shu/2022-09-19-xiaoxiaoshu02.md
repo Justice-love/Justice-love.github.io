@@ -8,7 +8,7 @@ feature: https://static.justice-love.com/image/jpg/xktp.jpg
 shu: true
 comments: true
 ---
-小小舒的摸头杀
+小小舒的摸头杀, 挺可爱但是看上去好黄
 {: .notice}
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/motousha.jpeg" />
