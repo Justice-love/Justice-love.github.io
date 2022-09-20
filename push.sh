@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd /opt/pages/www
+cd /opt/pages/www || exit
 nowTime=`date "+%Y%m%d%H%M"`
 git pull
 git add .
