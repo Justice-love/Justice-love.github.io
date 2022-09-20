@@ -3,7 +3,7 @@ layout: post
 title: "小小舒"
 date: 2022-09-19
 excerpt: "小小舒日记-1"
-tags: [徐晓妍]
+tags: [小小舒]
 feature: https://static.justice-love.com/image/jpg/xktp.jpg
 shu: true
 comments: true
