@@ -5,7 +5,7 @@ date: 2022-09-20
 excerpt: "小小舒日记-4"
 tags: [小小舒]
 feature: https://static.justice-love.com/image/jpg/xktp.jpg
-yan: true
+shu: true
 comments: true
 video: true
 ---
