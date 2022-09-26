@@ -11,5 +11,5 @@ comments: true
 妈妈买了个蓝光灯, 自己在家照蓝光了
 {: .notice}
 <figure>
-    <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/zhaolanguang.jpeg" />
+    <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/languang.jpeg" />
 </figure>
