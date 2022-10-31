@@ -2,7 +2,7 @@
 layout: post
 title: "睡着的小小舒2"
 date: 2022-10-13
-excerpt: "小小舒日记-11"
+excerpt: "小小舒日记-12"
 tags: [小小舒]
 feature: https://static.justice-love.com/image/jpg/xktp.jpg
 shu: true
