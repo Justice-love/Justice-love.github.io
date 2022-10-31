@@ -9,6 +9,7 @@ shu: true
 comments: true
 ---
 睡着了的妹妹
+{: .notice}
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/xiaoxiaoshushuijiaozhao.jpeg" />
 </figure>

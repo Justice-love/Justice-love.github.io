@@ -9,6 +9,7 @@ shu: true
 comments: true
 ---
 睡着的小小舒
+{: .notice}
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/shuijiaodemeimei2.jpeg" />
 </figure>

@@ -10,6 +10,7 @@ comments: true
 video: true
 ---
 懵懂的小小舒
+{: .notice}
 <video id="my-video" class="video-js vjs-16-9 clipboard" controls preload="auto" width="722" height="264" data-setup="{}">
     <source src="{{ site.staticUrl }}/xiaoxiaoshu/video/mengdongshu.mp4" type='video/mp4'>
     <p class="vjs-no-js">
