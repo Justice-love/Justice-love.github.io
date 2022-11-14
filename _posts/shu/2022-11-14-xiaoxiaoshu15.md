@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "微小的妹妹"
+title: "微笑的妹妹"
 date: 2022-11-14
 excerpt: "小小舒日记-15"
 tags: [小小舒]
