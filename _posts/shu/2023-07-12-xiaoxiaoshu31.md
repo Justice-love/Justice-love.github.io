@@ -11,5 +11,5 @@ comments: true
 坐在竹藤车上的妹妹
 {: .notice}
 <figure>
-    <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/zhutengche.jpeg" />
+    <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/zhutengche.jpg" />
 </figure>
