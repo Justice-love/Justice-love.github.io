@@ -9,5 +9,5 @@ tag:
 comments: true
 ---
 <figure>
-	<img src="{{ site.staticUrl }}/image/png/k8s-conmands.jpg" />
+	<img src="{{ site.staticUrl }}/image/jpg/k8s-conmands.jpg" />
 </figure>
