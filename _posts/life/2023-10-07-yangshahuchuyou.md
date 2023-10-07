@@ -21,6 +21,7 @@ life: true
 要穿尿不湿<br />
 到哪都不怕<br />
 我穿尿不湿<br />
+{: .notice}
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (1).jpg" />
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (2).jpg" />
