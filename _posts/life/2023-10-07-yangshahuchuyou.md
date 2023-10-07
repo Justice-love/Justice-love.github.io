@@ -12,6 +12,16 @@ life: true
 ---
 趁着中秋国庆八天假期，全家到洋湖游玩，奶奶负责照相，所以没出镜
 {: .notice}
+因为用妹妹的奶嘴喝水，还要穿妹妹的尿不湿，所以给徐晓妍（这个月满6岁）编了首打油诗
+{: .notice}
+《妍妍之歌》
+我叫徐晓妍
+来自辫子帮
+喝水用奶嘴
+要穿尿不湿
+到哪都不怕
+我穿尿不湿
+{: .notice}
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (1).jpg" />
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (2).jpg" />
