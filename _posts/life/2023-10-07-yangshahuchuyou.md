@@ -14,20 +14,13 @@ life: true
 {: .notice}
 因为用妹妹的奶嘴喝水，还要穿妹妹的尿不湿，所以给徐晓妍（这个月满6岁）编了首打油诗
 {: .notice}
-《妍妍之歌》
-{: .notice}
-我叫徐晓妍
-{: .notice}
-来自辫子帮
-{: .notice}
-喝水用奶嘴
-{: .notice}
-要穿尿不湿
-{: .notice}
-到哪都不怕
-{: .notice}
-我穿尿不湿
-{: .notice}
+《妍妍之歌》<br />
+我叫徐晓妍<br />
+来自辫子帮<br />
+喝水用奶嘴<br />
+要穿尿不湿<br />
+到哪都不怕<br />
+我穿尿不湿<br />
 <figure>
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (1).jpg" />
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (2).jpg" />
