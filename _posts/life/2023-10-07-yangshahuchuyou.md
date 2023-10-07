@@ -3,7 +3,7 @@ layout: post
 title: "全家游洋湖"
 date: 2023-10-07
 excerpt: "中秋国庆假期，全家到洋湖出游"
-tags: [小小舒]
+tags: [小小舒, 徐晓妍, 出游, 全家, 洋湖]
 feature: https://static.justice-love.com/image/jpg/xktp.jpg
 shu: true
 comments: true
