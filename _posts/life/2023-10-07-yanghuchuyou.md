@@ -9,6 +9,7 @@ shu: true
 comments: true
 yan: true
 life: true
+video: true
 ---
 趁着中秋国庆八天假期，全家到洋湖游玩，奶奶负责照相，所以没出镜
 {: .notice}
@@ -28,3 +29,10 @@ life: true
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (3).jpg" />
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (4).jpg" />
 </figure>
+<video id="my-video" class="video-js vjs-16-9 clipboard" controls preload="auto" width="722" height="264" data-setup="{}">
+    <source src="{{ site.staticUrl }}/yanyan/video/yanyanzhige.MP3" type=' audio/mpeg'>
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+</video>
