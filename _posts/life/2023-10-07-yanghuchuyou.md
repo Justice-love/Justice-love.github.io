@@ -30,7 +30,7 @@ video: true
     <img src="{{ site.staticUrl }}/xiaoxiaoshu/image/yijiayouyanghu (4).jpg" />
 </figure>
 <video id="my-video" class="video-js vjs-16-9 clipboard" controls preload="auto" width="722" height="264" data-setup="{}">
-    <source src="{{ site.staticUrl }}/yanyan/video/yanyanzhige.MP3" type=' audio/mpeg'>
+    <source src="{{ site.staticUrl }}/yanyan/video/yanyanzhige.MP3" type='audio/mpeg'>
     <p class="vjs-no-js">
         To view this video please enable JavaScript, and consider upgrading to a web browser that
         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
