@@ -2,7 +2,7 @@
 layout: post
 title: "噗噗妹"
 date: 2023-11-13
-excerpt: "小小舒日记-30"
+excerpt: "小小舒日记-40"
 tags: [小小舒]
 feature: https://static.justice-love.com/image/jpg/xktp.jpg
 shu: true
