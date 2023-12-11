@@ -9,7 +9,7 @@ shu: true
 comments: true
 video: true
 ---
-妹妹做雾化
+小小舒这几天一直咳嗽，妈妈带着妹妹做雾化
 {: .notice}
 <video id="my-video" class="video-js vjs-16-9 clipboard" controls preload="auto" width="722" height="264" data-setup="{}">
     <source src="{{ site.staticUrl }}/xiaoxiaoshu/video/meimeizuowuhua.mp4" type='video/mp4'>
